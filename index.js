@@ -160,3 +160,95 @@
 // const age = 15;
 
 // age >= 18 ? console.log("You Can Drive") : console.log("you Cannot Drive");
+
+// let savedPin = "1234";
+// let balance = 10000;
+
+// let enteredPin = prompt("Enter Your Pin!");
+
+// if (enteredPin != savedPin) {
+//   console.log("Incorrect Pin");
+// } else {
+//   let choice = prompt("Enter 2 For Withdrawl and 1 for Balance Check");
+//   if (choice == "1") {
+//     console.log(`Account Balance is ${balance}`);
+//   } else {
+//     let withdrawlAmount = Number(prompt("Enter Amount"));
+
+//     if (withdrawlAmount > balance) {
+//       console.log(`Insufficent Balance`);
+//     } else {
+//       console.log(
+//         `Transaction of ${withdrawlAmount} done remaining Balance is ${balance - withdrawlAmount}`,
+//       );
+//     }
+//   }
+// }
+
+// loops !important
+
+// debugger;
+
+// while (num <= 10) {
+//   console.log(num);
+//   num++;
+// }
+// let num = 10;
+// do {
+//   console.log(num);
+//   num++;
+// } while (num <= 5);
+
+// for loop   v.vvv important
+// const num = 3;
+
+// for (let i = 1; i <= 10; i++) {
+//   //   console.log(i);
+//   console.log(`${num} * ${i} = ${num * i}`);
+// }
+
+// let num = 100;
+// // let isPrime = true;
+
+// for (let i = 2; i < num; i++) {
+//   if (num % i == 0) {
+//     isPrime = false;
+//     break;
+//   }
+// }
+
+// if (isPrime) {
+//   console.log(`${num} is a Prime Number`);
+// } else {
+//   console.log(`${num} is not a Prime Number`);
+// }
+
+// nesting in loops
+// debugger;
+// for (let i = 5; i >= 1; i--) {
+//   let star = " ";
+
+//   for (let j = 1; j <= i; j++) {
+//     star += "*";
+//   }
+//   console.log(star);
+// }
+
+// Overview of String Methods
+
+// let email = "shoaib@gmail.com";
+// // let str2 = str1.trim();
+
+// if(!email.includes("@")){
+//     console.log("invalid Email");
+// }
+
+// const password = "1234";
+
+// if (password.length >= 8) {
+//   console("Password is Valid");
+// } else {
+//   console.log("Password must be of 8 letters ");
+// }
+
+// console.log();
