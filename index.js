@@ -252,3 +252,76 @@
 // }
 
 // console.log();
+
+// Math
+// debugger;
+// const num = Math.floor(1000 + Math.random() * 9000);
+
+// console.log(num);
+
+//  intro Arrays in js
+// debugger;
+
+// const nums = [2, 4, 5, 6];
+// //   0, 1, 2, 3    index numbers
+
+// console.log(nums[3]);
+
+// const numsLength = nums.length;
+
+// console.log(numsLength);
+
+// // const arr = new Array(2, 4, 5, 6);
+
+// console.log(nums[nums.length - 1]);
+
+// // console.log(arr);
+
+// const arr = [1, 4.6, "Hello", null, {}];
+
+// arr[2] = "world";
+// arr = [2, 4];
+
+// console.log(arr);
+
+// const nums = [1, 2, 4, 6];
+
+// console.log(nums);
+
+// // console.log(nums.indexOf(19));
+// // console.log(nums.includes(2));
+
+// nums.push(8);
+
+// console.log(nums);
+
+// const poppedNum = nums.pop();
+// // nums.pop();
+
+// console.log(poppedNum);
+
+// console.log(nums);
+
+// nums.unshift(10);
+// console.log(nums);
+
+// nums.shift();
+
+// console.log(nums);
+
+// debugger;
+const nums = [2, 5, 6, 8, 9, 12, 15, 8];
+// const evenNumbers = [];
+
+for (let i = 0; i < nums.length; i++) {
+  if (nums[i] % 3 == 0) {
+    console.log(nums[i] + " Buzz");
+  }
+  if (nums[i] % 5 == 0) {
+    console.log(nums[i] + " Fizz");
+  }
+
+  //   console.log(nums[i]);
+}
+
+// console.log(evenNumbers);
