@@ -309,19 +309,117 @@
 
 // console.log(nums);
 
-// debugger;
-const nums = [2, 5, 6, 8, 9, 12, 15, 8];
-// const evenNumbers = [];
+// // debugger;
+// const nums = [2, 5, 6, 8, 9, 12, 15, 8];
+// // const evenNumbers = [];
 
-for (let i = 0; i < nums.length; i++) {
-  if (nums[i] % 3 == 0) {
-    console.log(nums[i] + " Buzz");
-  }
-  if (nums[i] % 5 == 0) {
-    console.log(nums[i] + " Fizz");
-  }
+// for (let i = 0; i < nums.length; i++) {
+//   if (nums[i] % 3 == 0) {
+//     console.log(nums[i] + " Buzz");
+//   }
+//   if (nums[i] % 5 == 0) {
+//     console.log(nums[i] + " Fizz");
+//   }
 
-  //   console.log(nums[i]);
-}
+//   //   console.log(nums[i]);
+// }
 
 // console.log(evenNumbers);
+
+// for of loop
+
+// const nums = [2, 3, 4, 5, 6];
+
+// for (const i of nums) {
+//   console.log(i);
+// }
+
+// relation between strings and arrays
+
+// let str1 = "Hello";
+
+// for (let i = 0; i < str1.length; i++) {
+//   console.log(str1[i]);
+// }
+
+// console.log(str1);
+// const newArr = str1.split("");
+// console.log(newArr);
+// newArr.pop();
+
+// console.log(newArr);
+
+// const str2 = newArr.join("");
+
+// console.log(str2);
+
+// functions
+// declaring a funtion or defining
+// function greetings() {
+//   console.log("Hello World");
+// }
+
+// calling/invoking a function
+// greetings();
+
+// function greetings(name) {
+//   console.log(`Hello ${name}`);
+// }
+
+// greetings("Shoaib");
+// debugger;
+// function sumOfNumbers(a, b) {
+//   return a + b;
+// }
+
+// console.log(sumOfNumbers(2, 3));
+
+// sumOfNumbers(4, 7);
+//
+
+// debugger;
+// for (let i = 1; i <= 10; i++) {
+//   console.log("Hello World");
+// }
+
+// function arrSum(arr) {
+//   let sum = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
+//   console.log(sum / arr.length);
+// }
+
+// arrSum([2, 3, 4, 5]);
+
+// const arr = [2, 3, 5];
+
+// console.log(arr[1]);
+
+// function expression
+// const myFunction = function greetings() {
+//   console.log("Hello");
+// };
+
+// myFunction();
+
+// function generateOtp() {
+//   return Math.floor(1000 + Math.random() * 9000);
+// }
+
+// const otp = generateOtp();
+
+// console.log(otp);
+debugger;
+function hexColorGenerator() {
+  let char = "ABCDEF0123456789";
+  hexColor = "#";
+  for (let i = 0; i < 6; i++) {
+    hexColor += char[Math.floor(Math.random() * char.length)];
+    // hexColor += char[2]
+  }
+  console.log(hexColor);
+}
+
+hexColorGenerator();
