@@ -411,15 +411,4 @@
 // const otp = generateOtp();
 
 // console.log(otp);
-debugger;
-function hexColorGenerator() {
-  let char = "ABCDEF0123456789";
-  hexColor = "#";
-  for (let i = 0; i < 6; i++) {
-    hexColor += char[Math.floor(Math.random() * char.length)];
-    // hexColor += char[2]
-  }
-  console.log(hexColor);
-}
-
-hexColorGenerator();
+// debugger;
