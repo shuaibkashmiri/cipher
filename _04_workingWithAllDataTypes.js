@@ -50,16 +50,3 @@
 // }
 //
 // randomPasswordGenerator(15);
-
-// arrow Functions
-// const sumOfNumbers = (a, b) => {
-//   a + b;
-// };
-// // console.log(greet());
-
-// console.log(sumOfNumbers());
-
-// const oddEvenCheck = (num) =>
-//   num % 2 == 0 ? `${num} is Even` : ` ${num} is Odd`;
-
-// console.log(oddEvenCheck(9));
