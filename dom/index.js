@@ -33,50 +33,57 @@
 //   body.style.backgroundColor = hex;
 // }
 
-let count = 0;
+// let count = 0;
 
-let countOnUi = document.getElementById("countValue");
-let decBtn = document.getElementById("btn1");
-let resetBtn = document.getElementById("btn2");
-let incBtn = document.getElementById("btn3");
+// let countOnUi = document.getElementById("countValue");
+// let decBtn = document.getElementById("btn1");
+// let resetBtn = document.getElementById("btn2");
+// let incBtn = document.getElementById("btn3");
 
-countOnUi.textContent = count;
+// countOnUi.textContent = count;
 
-function updateUI() {
-  if (count > 0) {
-    countOnUi.style.color = "green";
-  } else if (count == 0) {
-    countOnUi.style.color = "black";
-  } else {
-    countOnUi.style.color = "red";
-  }
-}
+// function updateUI() {
+//   if (count > 0) {
+//     countOnUi.style.color = "green";
+//   } else if (count == 0) {
+//     countOnUi.style.color = "black";
+//   } else {
+//     countOnUi.style.color = "red";
+//   }
+// }
 
-updateUI();
-function increaseCount() {
-  count++;
-  countOnUi.textContent = count;
-  updateUI();
-}
+// updateUI();
+// function increaseCount() {
+//   count++;
+//   countOnUi.textContent = count;
+//   updateUI();
+// }
 
 // function resetcouunt() {
 //   count = 0;
 //   countOnUi.textContent = count;
-// }
-// passing a refrence of a function
-incBtn.addEventListener("click", increaseCount);
+// // }
+// // passing a refrence of a function
+// incBtn.addEventListener("click", increaseCount);
 
-// passing an direct function
-resetBtn.addEventListener("click", function () {
-  count = 0;
-  countOnUi.textContent = count;
-  updateUI();
-});
+// // passing an direct function
+// resetBtn.addEventListener("click", function () {
+//   count = 0;
+//   countOnUi.textContent = count;
+//   updateUI();
+// });
 
-decBtn.addEventListener("click", () => {
-  count--;
-  countOnUi.textContent = count;
-  updateUI();
-});
+// decBtn.addEventListener("click", () => {
+//   count--;
+//   countOnUi.textContent = count;
+//   updateUI();
+// });
 
 // resetBtn.addEventListener("click",resetcouunt)
+
+let box = document.getElementById("box");
+
+box.addEventListener("click", (event) => {
+  box.style.backgroundColor = "red";
+  console.log(event.target);
+});

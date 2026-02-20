@@ -1,4 +1,4 @@
-* {
+/* * {
   padding: 0%;
   margin: 0%;
 }
@@ -7,7 +7,7 @@
   background-color: black;
   color: #fff;
 } */
-
+/* 
 body {
   display: flex;
   flex-direction: column;
@@ -20,4 +20,60 @@ body {
   max-width: 30%;
   padding: 1% 2%;
   border-radius: 20%;
+} */
+
+* {
+  border: 1px solid red;
+  /* font-size: 100px; */
+}
+body {
+  /* font-size: 300px; */
+}
+
+.main {
+  margin: 0%;
+  padding: 0%;
+  min-height: 100vh;
+  /* font-size: 100px; */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 200px;
+  font-size: 20px;
+}
+
+.para {
+  font-size: 18px;
+}
+
+.number {
+  margin-top: 2%;
+  margin-left: 45%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.inputs {
+  /* min-width: em; */
+  display: flex;
+  min-width: 100%;
+  justify-content: space-around;
+}
+
+.guess {
+  max-width: 150px;
+  height: 100px;
+  font-size: 50px;
+}
+.msg {
+  font-size: 2em;
 }
