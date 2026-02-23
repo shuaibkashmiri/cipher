@@ -81,9 +81,36 @@
 
 // resetBtn.addEventListener("click",resetcouunt)
 
-let box = document.getElementById("box");
+// let box = document.getElementById("box");
 
-box.addEventListener("click", (event) => {
-  box.style.backgroundColor = "red";
-  console.log(event.target);
+// box.addEventListener("click", (event) => {
+//   box.style.backgroundColor = "red";
+//   console.log(event.target);
+// });
+
+const randomNumber = Math.floor(Math.random() * 20) + 1;
+// document.querySelector(".number").textContent = randomNumber;
+console.log(randomNumber);
+const msg = document.querySelector(".msg");
+
+const submitBtn = document.querySelector("#submit");
+
+submitBtn.addEventListener("click", () => {
+  const enteredNumber = Number(document.querySelector(".guess").value);
+  if (!enteredNumber || enteredNumber == 0) {
+    msg.textContent = "Enter a Number between 1 to 20";
+  } else if (enteredNumber > randomNumber) {
+    msg.textContent = "📈 Number Too High";
+  } else if (enteredNumber < randomNumber) {
+    msg.textContent = "📈 Number Too Low";
+  } else if (enteredNumber == randomNumber) {
+    msg.textContent = "🎉 You Guessed a Right Number";
+    document.querySelector("body").style.backgroundColor = "green";
+    document.querySelector(".number").textContent = randomNumber;
+  }
+});
+
+document.querySelector("#reset").addEventListener("click", () => {
+  document.querySelector("body").style.backgroundColor = "#333";
+  msg.textContent = "Start Guessing a Number...";
 });
