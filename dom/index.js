@@ -116,7 +116,19 @@
 // });
 
 document.querySelector(".btn").addEventListener("click", () => {
+  // alert("Hello");
   const randomNumber = Math.floor(Math.random() * 6) + 1;
   console.log(randomNumber);
-  document.querySelector(".image").src = `dice${randomNumber}.png`;
+  document.querySelector("#left").src = `dice${randomNumber}.png`;
+  const randomNumber2 = Math.floor(Math.random() * 6) + 1;
+  console.log(randomNumber);
+  document.querySelector("#right").src = `dice${randomNumber2}.png`;
+
+  if (randomNumber > randomNumber2) {
+    document.querySelector(".header").textContent = "Player 1 Is Winner";
+  } else if (randomNumber == randomNumber2) {
+    document.querySelector(".header").textContent = "Draw!";
+  } else {
+    document.querySelector(".header").textContent = "Player 2 is Winner";
+  }
 });
