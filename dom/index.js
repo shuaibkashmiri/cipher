@@ -115,20 +115,137 @@
 //   msg.textContent = "Start Guessing a Number...";
 // });
 
-document.querySelector(".btn").addEventListener("click", () => {
-  // alert("Hello");
-  const randomNumber = Math.floor(Math.random() * 6) + 1;
-  console.log(randomNumber);
-  document.querySelector("#left").src = `dice${randomNumber}.png`;
-  const randomNumber2 = Math.floor(Math.random() * 6) + 1;
-  console.log(randomNumber);
-  document.querySelector("#right").src = `dice${randomNumber2}.png`;
+// document.querySelector(".btn").addEventListener("click", () => {
+//   // alert("Hello");
+//   const randomNumber = Math.floor(Math.random() * 6) + 1;
+//   console.log(randomNumber);
+//   document.querySelector("#left").src = `dice${randomNumber}.png`;
+//   const randomNumber2 = Math.floor(Math.random() * 6) + 1;
+//   console.log(randomNumber);
+//   document.querySelector("#right").src = `dice${randomNumber2}.png`;
 
-  if (randomNumber > randomNumber2) {
-    document.querySelector(".header").textContent = "Player 1 Is Winner";
-  } else if (randomNumber == randomNumber2) {
-    document.querySelector(".header").textContent = "Draw!";
-  } else {
-    document.querySelector(".header").textContent = "Player 2 is Winner";
-  }
+//   if (randomNumber > randomNumber2) {
+//     document.querySelector(".header").textContent = "Player 1 Is Winner";
+//   } else if (randomNumber == randomNumber2) {
+//     document.querySelector(".header").textContent = "Draw!";
+//   } else {
+//     document.querySelector(".header").textContent = "Player 2 is Winner";
+//   }
+// });
+
+// !important array methods or Array specific loops
+
+// const nums = [2, 4, 6, 7, 8];
+
+// users.forEach((user) => {
+//   console.log(user.fullname);
+//   console.log(user.age);
+// });
+
+// const names = users.map((user) => {
+//   if (user.age > 18) return user.fullname;
+
+// });
+
+// console.log(names);
+// const numsSq = nums.map((num) => {
+//   return num * num;
+// });
+
+// console.log(numsSq);
+// using arrow function
+// const numSq = nums.forEach((num,i,arr) => {
+
+// });
+
+// console.log(numSq);
+// console.log(nums);
+// nums.forEach(function (num, i, arr) {
+
+// });
+
+// for (let i = 0; i < nums.length; i++) {
+//   console.log(nums[i]);
+// }
+
+// const fruits = ["Apple", "Orange", "Grapes"];
+// const list = document.querySelector("ul");
+
+// list.innerHTML = fruits.map((fruit) => {
+//   // const creteLi = document.createElement("li");
+//   // creteLi.textContent = fruit;
+//   // list.appendChild(creteLi);
+//   return `<li>${fruit}</li>`;
+// });
+
+// const data = fruits
+//   .map((fruit) => {
+//     // const creteLi = document.createElement("li");
+//     // creteLi.textContent = fruit;
+//     // list.appendChild(creteLi);
+//     return `<li>${fruit}</li>`;
+//   })
+//   .join("");
+
+// console.log(data);
+// console.log(list.innerHTML);
+
+// const numsSq = nums.map((num) => {
+//   return num * num;
+// });
+// console.log(numsSq);
+
+// const nums = [2, 3, 4, 5, 7, 8];
+
+// const result = nums
+//   .filter((num) => num % 2 == 0)
+//   .map((num) => num * num)
+//   .reduce((acc, curr) => acc + curr);
+
+// console.log(result);
+
+// const evenSq = evenNumbers.map((num) => {
+//   return num * num;
+// });
+
+// const sumOfnums = nums.reduce((acc, curr) => {
+//   return acc + curr;
+// }, 0);
+
+// step 1; step2; step3
+// acc0   0+2
+
+// console.log(sumOfnums);
+// console.log(evenNumbers);
+// console.log(evenSq);
+
+const users = [
+  {
+    fullname: "Harris",
+    salary: 39999,
+    role: "Developer",
+  },
+  {
+    fullname: "Saqib",
+    salary: 35000,
+    role: "Developer",
+  },
+  {
+    fullname: "Shaiaan",
+    salary: 40000,
+    role: "Engineer",
+  },
+];
+
+// const nums = [2, { name: "shoaib" }, 6, 7];
+// console.log(nums[1]);
+// // console.log(users[0]);
+
+// const filteredData = users.filter((user) => user.role == "Developer");
+// console.log(filteredData);
+
+const salarySum = users.reduce((total, curr) => {
+  return total + curr.salary;
 });
+
+console.log(salarySum);
