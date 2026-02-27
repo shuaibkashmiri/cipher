@@ -28,24 +28,14 @@
 
 // console.log(calculator(2, 3, add));
 
-// // very very important
-// // closures
+// // // very very important
+// // // closures
 // function outer() {
 //   let count = 0;
 //   return function inner() {
 //     return count++;
 //   };
 // }
-
-function init() {
-  var name = "Mozilla"; // name is a local variable created by init
-  function displayName() {
-    // displayName() is the inner function, that forms a closure
-    console.log(name); // use variable declared in the parent function
-  }
-  displayName();
-}
-init();
 
 // const counter = outer();
 // console.log(counter());
@@ -65,4 +55,41 @@ init();
 
 // object destructuring
 // let user = { name: "Harris", age: 20 };
-// let { name, age} = user;
+// let { name: fullname, age } = user;
+
+// console.log(fullname);
+
+// spread operator
+
+// const arr1 = [2, 4, 5, 6];
+// const arr2 = [5, 7];
+// console.log(arr1);
+// // console.log(nums);
+// console.log(...arr1);
+
+// const arr3 = [...arr1, ...arr2];
+
+// console.log(arr3);
+
+// let user = { name: "Harris", age: 20 };
+
+// const newUser = { ...user, age: 23 };
+
+// console.log(newUser);
+
+// rest operator
+
+// function collect(...nums) {
+//   return nums.reduce((acc, curr) => {
+//     return acc + curr;
+//   }, 0);
+// }
+
+// console.log(collect(2, 3, 9, 8, 7, 8));
+
+// const nums = [2, 3, 4, 5, 6];
+
+// console.log(nums.reduce((acc, curr) => acc + curr));
+
+count = 0;
+console.log(++count);

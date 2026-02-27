@@ -1,21 +1,10 @@
-.main {
-  display: flex;
-  justify-content: space-evenly;
-  /* flex-direction: column; */
-  gap: 20px;
-}
-h1 {
-  text-align: center;
+.sidebar {
+  max-width: 300px;
+  min-height: 100vh;
+  background-color: #333;
+  font-size: 40px;
 }
 
-img {
-  width: 300px;
-  height: 300px;
-}
-
-.btn {
-  margin-top: 50px;
-  width: 200px;
-  height: 70px;
-  margin-left: 45%;
+.hidden {
+  display: none;
 }

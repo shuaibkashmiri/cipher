@@ -219,23 +219,23 @@
 // console.log(evenNumbers);
 // console.log(evenSq);
 
-const users = [
-  {
-    fullname: "Harris",
-    salary: 39999,
-    role: "Developer",
-  },
-  {
-    fullname: "Saqib",
-    salary: 35000,
-    role: "Developer",
-  },
-  {
-    fullname: "Shaiaan",
-    salary: 40000,
-    role: "Engineer",
-  },
-];
+// const users = [
+//   {
+//     fullname: "Harris",
+//     salary: 39999,
+//     role: "Developer",
+//   },
+//   {
+//     fullname: "Saqib",
+//     salary: 35000,
+//     role: "Developer",
+//   },
+//   {
+//     fullname: "Shaiaan",
+//     salary: 40000,
+//     role: "Engineer",
+//   },
+// ];
 
 // const nums = [2, { name: "shoaib" }, 6, 7];
 // console.log(nums[1]);
@@ -244,8 +244,12 @@ const users = [
 // const filteredData = users.filter((user) => user.role == "Developer");
 // console.log(filteredData);
 
-const salarySum = users.reduce((total, curr) => {
-  return total + curr.salary;
-});
+// const salarySum = users.reduce((total, curr) => {
+//   return total + curr.salary;
+// },0);
 
-console.log(salarySum);
+// console.log(salarySum);
+
+document.querySelector("button").addEventListener("click", () => {
+  document.querySelector("div").classList.toggle("hidden");
+});
