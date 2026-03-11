@@ -124,23 +124,150 @@
 //     console.log("Operation Completed");
 //   });
 
-function login() {
-  return new Promise((resolve, reject) => {
-    resolve("User Logged In Successfully");
-  });
-}
+// function login() {
+//   return new Promise((resolve, reject) => {
+//     resolve("User Logged In Successfully");
+//   });
+// }
 
-function userData() {
-  return new Promise((resolve, reject) => {
-    resolve({ name: "Harris" });
-  });
-}
+// function userData() {
+//   return new Promise((resolve, reject) => {
+//     resolve({ name: "Harris" });
+//   });
+// }
 
-login()
-  .then((data) => {
+// login()
+//   .then((data) => {
+//     console.log(data);
+//     return userData();
+//   })
+//   .then((userData) => {
+//     console.log(userData);
+//   });
+
+// function greet() {
+//   return new Promise((resl, rejc) => {
+//     // console.log("Hello");\
+//     setTimeout(() => {
+//       resl("Hello");
+//     }, 3000);
+//   });
+// }
+
+// async function getData() {
+//   const response = await greet();
+
+// }
+
+// getData();
+
+// function stepTwo() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Step Two Completed");
+//     }, 2000);
+//   });
+// }
+
+// async function getData() {
+//   const step1 = await stepOne();
+
+//   console.log(step1);
+//   const step2 = await stepTwo();
+//   console.log(step2);
+// }
+
+// getData();
+
+// function stepOne() {
+//   return new Promise((resolve, reject) => {
+//     const sucess = false;
+//     if (sucess) {
+//       resolve("Solved!");
+//     } else {
+//       reject("Some Error ");
+//     }
+//   });
+// }
+
+// async function handle() {
+//   try {
+//     const res = await stepOne();
+//     console.log(res);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// // handle();
+
+// async function fetchData() {
+//   try {
+//     const name = prompt("Enter Your Name");
+//     const res = await fetch(`https://api.nationalize.io/?name=${name}`, {
+//       method: "GET",
+//     });
+
+//     const data = await res.json();
+// data.forEach((element) => {
+//   console.log(element);
+// });
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// fetchData();
+
+// fetch("https://api.thecatapi.com/v1/images/search?limit=10")
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//     data.forEach((element) => {
+//       console.log(element.url);
+//       const createImage = document.createElement("img");
+//       createImage.setAttribute("src", element.url);
+//       document.querySelector("body").appendChild(createImage);
+//     });
+//   });
+
+// async function getImages() {
+//   try {
+//     const res = await fetch(
+//       "https://api.thecatapi.com/v1/images/search?limit=10",
+//     );
+//     const data = await res.json();
+//     data.forEach((element) => {
+//       console.log(element.url);
+//       const createImage = document.createElement("img");
+//       createImage.setAttribute("src", element.url);
+//       document.querySelector("body").appendChild(createImage);
+//     });
+
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// getImages();
+
+async function getWeather(city) {
+  try {
+    const res = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=582dadc6e882931bac1cb287adbed3e4&units=metric`,
+    );
+    const data = await res.json();
     console.log(data);
-    return userData();
-  })
-  .then((userData) => {
-    console.log(userData);
-  });
+    console.log(
+      `The Waeather in ${city} is ${data.weather[0].main} with Min Temp of ${data.main.temp_min} with High of ${data.main.temp_max}`,
+    );
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getWeather("Srinagar");
