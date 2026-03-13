@@ -255,19 +255,114 @@
 
 // getImages();
 
-async function getWeather(city) {
-  try {
-    const res = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=582dadc6e882931bac1cb287adbed3e4&units=metric`,
-    );
-    const data = await res.json();
-    console.log(data);
-    console.log(
-      `The Waeather in ${city} is ${data.weather[0].main} with Min Temp of ${data.main.temp_min} with High of ${data.main.temp_max}`,
-    );
-  } catch (error) {
-    console.log(error);
-  }
-}
+// async function getWeather(city) {
+//   try {
+//     const res = await fetch(
+//       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=582dadc6e882931bac1cb287adbed3e4&units=metric`,
+//     );
+//     const data = await res.json();
+//     console.log(data);
+//     console.log();
+//     const message = document.querySelector("p");
+//     if (data.weather[0].main == "Clouds") {
+//       message.textContent = `The Weather in ${city} is ${data.weather[0].main} ☁️ with temperature of ${data.main.temp} 🌡️°C`;
+//     } else if (data.weather[0].main == "Clear") {
+//       message.textContent = `The Weather in ${city} is ${data.weather[0].main} ☀️ with temperature of ${data.main.temp} 🌡️°C`;
+//     } else {
+//       message.textContent = `The Weather in ${city} is ${data.weather[0].main} with temperature of ${data.main.temp} 🌡️°C`;
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-getWeather("Srinagar");
+// document.querySelector("#btn").addEventListener("click", () => {
+//   const city = document.querySelector("input").value;
+//   //   console.log(city);
+//   getWeather(city);
+// });
+// const user = {
+//   username: "Shoaib",
+//   role: "Dev",
+// };
+
+// localStorage.setItem("user", JSON.stringify(user));
+
+// localStorage.setItem("greet", "Hello");
+// const getUser = JSON.parse(localStorage.getItem("user"));
+// console.log(getUser);
+
+// ajax
+
+// let xhr = new XMLHttpRequest();
+
+// xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+
+// xhr.onload = function () {
+//   const data = JSON.parse(xhr.responseText);
+//   console.log(data);
+// };
+
+// xhr.send();
+
+// constructors
+
+// function User(name) {
+//   this.name = name;
+//   //   return this.name;
+//   this.greet = function () {
+//     console.log(`Hello ${this.name}`);
+//   };
+// }
+
+// const newName = new User("Shoaib");
+// const user2 = new User("Harris");
+
+// newName.greet();
+// user2.greet();
+// console.log(newName.name);
+
+// class constructor //modern
+
+// class Person {
+//   constructor(name = "Shoaib") {
+//     this.name = name;
+//   }
+//   greet() {
+//     console.log(`Hello ${this.name}`);
+//   }
+// }
+
+// const p1 = new Person();
+// // p1.greet();
+// const onePerson = new Person("Harris");
+// console.log(onePerson);
+// onePerson.greet();
+
+// // inheritance
+
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   speak() {
+//     console.log(`${this.name} makes a sound`);
+//   }
+// }
+
+// class Dog extends Animal {
+//   constructor(name, breed) {
+//     super(name);
+//     this.breed = breed;
+//   }
+//   info() {
+//     console.log(`${this.name} is ${this.breed}`);
+//   }
+// }
+
+// const d1 = new Dog("tommy", "German");
+
+// // d1.speak();
+// d1.info();
+
+// const arr= new Array()
